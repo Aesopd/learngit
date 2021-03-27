@@ -47,7 +47,11 @@ git switch -c <目标分支 | dev>	//同上一条命令
 git branch						//查看当前分支，带*号的是当前所在分支
 git merge <目标分支 | dev>		//把目标分支dev分支的工作成果合并到当前分支。
 git branch -d <目标分支 | dev>	//合并完成后，就可以放心地删除目标分支dev分支了
-xixihaha
+git log --graph --pretty=oneline --abbrev-commit	//用简单图形显示当前分支的合并情况
+	//冲突及解决：git merge时显示冲突,回到文本中单击一下会发现有conflict的具体比较信息,直接手动修改后就可以正常git add跟git commit，让版本号领先冲突的两个号从而冲突消失。记得删除临时分支。
+
+
+	
 
 
 
