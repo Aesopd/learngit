@@ -58,6 +58,7 @@ git branch -d <目标分支 | dev>	//合并完成后，就可以放心地删除�
 git branch -D <目标分支 | dev>	//通过git branch -D <name>强行删除一个没有被合并过的分支
 git log --graph					//超详细的分之合并图，细节非常多但是看着很不直观
 git log --graph --pretty=oneline --abbrev-commit	//用简单图形显示当前分支的合并情况
+git log --pretty=oneline --abbrev-commit			//合并成单线并输出（无图形描述）
 	//冲突及解决：git merge时显示冲突,回到文本中单击一下会发现有conflict的具体比较信息,直接手动修改后就可以正常git add跟git commit，让版本号领先冲突的两个号从而冲突消失。记得删除临时分支。
 	//本地创建的新branch好像无法同步到github的远程branch
 git merge --no-ff -m "merge with no-ff" <目标分支 | dev>	//用普通模式合并dev目标分支，请注意--no-ff参数，表示禁用Fast forward。普通模式合并后的历史有分支，能看出来曾经做过合并，而fast forward合并就看不出来曾经做过合并。
@@ -78,6 +79,14 @@ git rebase						//rebase操作可以把本地未push的分叉提交历史整理�
 	//创建标签相关
 git tag < tag-name | v1.0>				//先切换到需要打标签的分支上，敲命令git tag <tag-name>就可以打一个新标签
 git tag									//查看所有标签
+git log --pretty=oneline --abbrev-commit	//简约显示commit-id
+git tag < tag-name | v1.0> < commit-id | f52c633>	//给指定版本打标签
+git show <tag-name>				//查看标签为tag-name的信息
+git tag -a <tag-name> -m "<要说明的内容 | version 0.1 released>" < commit-id | f52c633>	//创建带有说明的标签，用-a指定标签名，-m指定说明文字
+	//P.S.标签总是和某个commit挂钩。如果这个commit既出现在master分支，又出现在dev分支，那么在这两个分支上都可以看到这个标签。
+git tag -d <tag-name>			//删除标签
+git push origin <tag-name>		//推送某个标签到远程
+
 
 
 
