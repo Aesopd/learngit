@@ -76,8 +76,8 @@ git branch --set-upstream-to <branch-name> origin/<branch-name>		//git pull也�
 git rebase						//rebase操作可以把本地未push的分叉提交历史整理成直线，看上去更直观。缺点是本地的分叉提交已经被修改过了。rebase的目的是使得我们在查看历史提交的变化时更容易，因为分叉的提交需要三方对比。
 
 	//创建标签相关
-
-
+git tag < tag-name | v1.0>				//先切换到需要打标签的分支上，敲命令git tag <tag-name>就可以打一个新标签
+git tag									//查看所有标签
 
 
 
