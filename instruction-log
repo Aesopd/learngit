@@ -17,7 +17,6 @@ git checkout -- readme.txt		//linux
 git restore readme.txt			//windows
 git restore --staged readme.txt	//windows
 	//意思就是，把readme.txt文件在工作区的修改全部撤销，这里有两种情况：
-
 	//一种是readme.txt自修改后还没有被放到暂存区，现在，撤销修改就回到和版本库一模一样的状态；
 	  上述命令为	git restore readme.txt
 	//一种是readme.txt已经添加到暂存区后，又作了修改，现在，撤销修改就回到添加到暂存区后的状态。
@@ -36,7 +35,10 @@ git push -u origin master
 git push origin master			//从现在起，只要本地作了提交，就可以通过命令：$ git push origin master 把本地master分支的最新修改推送至GitHub，现在，你就拥有了真正的分布式版本库！
 git remote -v					//查看远程库信息
 git remote rm <origin | 远程库的名字>	//此处的“删除”其实是解除了本地和远程的绑定关系，并不是物理上删除了远程库。远程库本身并没有任何改动。要真正删除远程库，需要登录到GitHub，在后台页面找到删除按钮再删除。
-
+	//注意，在本地git commit后再git push到远程仓库才有效。git push是push的commit后HEAD->master版本库中的内容
+	
+	
+	
 
 
 
