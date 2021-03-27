@@ -12,4 +12,19 @@ git reset --hard {commit id}	//跳转到这个版本号，可进可退，本质�
 git reflog						//用来记录你的每一次命令,可查看历史commit id
 	//在Git中，总是有后悔药可以吃的。当你用$ git reset --hard HEAD^回退到add distributed版本时，再想恢复到append GPL，就必须找到append GPL的commit id。Git提供了一个命令git reflog用来记录你的每一次命令
 
+git diff HEAD -- readme.txt		//可以查看工作区和版本库里面最新版本的区别(前提是都在看readme.txt）
+git checkout -- readme.txt		//linux
+git restore readme.txt			//windows
+	//意思就是，把readme.txt文件在工作区的修改全部撤销，这里有两种情况：
+
+	//一种是readme.txt自修改后还没有被放到暂存区，现在，撤销修改就回到和版本库一模一样的状态；
+
+	//一种是readme.txt已经添加到暂存区后，又作了修改，现在，撤销修改就回到添加到暂存区后的状态。
+
+	//总之，就是让这个文件回到最近一次git commit或git add时的状态。
+git reset HEAD <file>			//可以把暂存区的修改撤销掉（unstage），重新放回工作区
+
+
+
+
 
