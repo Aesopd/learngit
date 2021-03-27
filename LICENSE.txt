@@ -1,2 +1,16 @@
-steph curry
-nice
+Your identification has been saved in C:\Users\xj_mao/.ssh/id_rsa.
+Your public key has been saved in C:\Users\xj_mao/.ssh/id_rsa.pub.
+The key fingerprint is:
+SHA256:hh93VqSRFdgZKi3f9hVJv6uH+vCtdNkVNdXLUSDWGsI 1363818182@qq.com
+The key's randomart image is:
++---[RSA 2048]----+
+|         .  +**BB|
+|          Eo+*=.*|
+|          o.+oo++|
+|       .   +.o o+|
+|      . S . + o.o|
+|       o o o . .*|
+|        .  . ..+o|
+|            +.+. |
+|           .o=o. |
++----[SHA256]-----+
